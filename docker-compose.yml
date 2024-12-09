@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  product-service:
+    build: ./product-service
+    ports:
+      - "3001:3001"
+  cart-service:
+    build: ./cart-service
+    ports:
+      - "3002:3002"
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "4000:4000"
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
